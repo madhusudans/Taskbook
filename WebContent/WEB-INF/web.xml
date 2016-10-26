@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/TestDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>Tasklist Servlet</display-name>
+    <servlet-name>TasklistServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.TasklistServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TasklistServlet</servlet-name>
+    <url-pattern>/tasklist</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Task Servlet</display-name>
+    <servlet-name>TaskServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.TaskServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaskServlet</servlet-name>
+    <url-pattern>/task</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Subtask Servlet</display-name>
+    <servlet-name>SubtaskServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.SubtaskServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubtaskServlet</servlet-name>
+    <url-pattern>/subtask</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Comments Servlet</display-name>
+    <servlet-name>CommentsServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.CommentsServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentsServlet</servlet-name>
+    <url-pattern>/comments</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Friend Servlet</display-name>
+    <servlet-name>FriendServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.FriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FriendServlet</servlet-name>
+    <url-pattern>/managefriend</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login Servlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Logout Servlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Collaboration Servlet</display-name>
+    <servlet-name>CollaborationServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.CollaborationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CollaborationServlet</servlet-name>
+    <url-pattern>/collaboration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>User Profile Servlet</display-name>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <servlet-class>com.taskbook.controller.UserProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <url-pattern>/userProfile</url-pattern>
+  </servlet-mapping>  
+</web-app>
